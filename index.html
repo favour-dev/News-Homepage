@@ -17,20 +17,29 @@
 </head>
 <body>
   <!-- Navigation -->
-  <section id="Navigation-Bar">
-    <div class="Container" >
+  <section id="Container">
+    <div class="Navigation-Bar" >
       <div class="logo"><img src="./assets/images/logo.svg" alt="News Logo"></div>
-      <div class="Menu-items">
+      <div id="mobile-menu" class="Menu-items">
+        <img src="./assets/images/icon-menu-close.svg" class="closebtn" onclick="closeNav()">
         <a href="">Home</a>
         <a href="">New</a>
         <a href="">Popular</a>
         <a href="">Trending</a>
         <a href="">Categories</a>
       </div>
-      <div class="Hamburger"><img src="./assets/images/icon-menu.svg" alt="Menu Icon"></div>
+      <div class="Hamburger" ><img src="./assets/images/icon-menu.svg" alt="Menu Icon" onclick="openNav()"></div>
     </div>
   </section>
 
+  <script>
+    function openNav() {
+    document.getElementById("mobilemenu").style.width = "250px";
+    }
+    function closeNav() {
+    document.getElementById("mobilemenu").style.width = "0";
+    } 
+  </script>
 
   The Bright Future of Web 3.0?
 

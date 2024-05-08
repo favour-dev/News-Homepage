@@ -1,7 +1,55 @@
-.Container{
+body {
+    background-color: rgb(255, 255, 255);
+}
+#Container{
+    margin: auto;
+}
+.Navigation-Bar{
     display: flex;
     justify-content: space-between;
+    border: 2px solid red;
 }
+/* a{
+    text-decoration: none;
+    padding: 10px;
+} */
 .Menu-items{
-    display: none;
+    height:100%;
+    width: 60%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left:125px;
+    background-color:hsl(36, 100%, 99%);
+    border: 2px solid rgb(0, 17, 255);
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.Menu-items a{
+    padding: 8px 8px 8px 12px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #140606;
+    display: block;
+    transition: 0.3s;
+}
+.closebtn{
+    margin-left: 140px;
+}
+.Hamburger{
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 1440px) {
+    #Container{
+        margin: auto;
+        width: 80%;
+    }
+    /* .Menu-items{
+        display: block;
+        margin-top: 10px;
+    } */
+    .Hamburger{
+        display: none;
+    }
 }
