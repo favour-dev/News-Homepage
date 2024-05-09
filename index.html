@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | News homepage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -21,24 +24,38 @@
     <div class="Navigation-Bar" >
       <div class="logo"><img src="./assets/images/logo.svg" alt="News Logo"></div>
       <div id="mobile-menu" class="Menu-items">
-        <img src="./assets/images/icon-menu-close.svg" class="closebtn" onclick="closeNav()">
-        <a href="">Home</a>
-        <a href="">New</a>
-        <a href="">Popular</a>
-        <a href="">Trending</a>
-        <a href="">Categories</a>
+        <div class="closebtn"><img src="./assets/images/icon-menu-close.svg"  id="closebutton" /></div>
+        <div class="menu">
+          <div><a href="">Home</a></div>
+          <div><a href="">New</a></div>
+          <div><a href="">Popular</a></div>
+          <div><a href="">Trending</a></div>
+          <div><a href="">Categories</a></div>
+        </div>
       </div>
-      <div class="Hamburger" ><img src="./assets/images/icon-menu.svg" alt="Menu Icon" onclick="openNav()"></div>
+      <div id="hamburger-icon" class="Hamburger" onclick="dropdown()"><img src="./assets/images/icon-menu.svg" alt="Menu Icon"></div>
     </div>
   </section>
 
   <script>
-    function openNav() {
-    document.getElementById("mobilemenu").style.width = "250px";
+    //Getting elemet by Id and storing it in a variable.
+    const hamburgerIcon = document.getElementById("mobile-menu");
+    const closeBtn = document.getElementById("closebutton")
+    function dropdown (){
+      // check if the menuitem is displayed or not. 
+      //if it is, drop-down changes to hidden and vice versa
+      if(hamburgerIcon.className == "Menu-items"){
+          hamburgerIcon.style.display = "block" 
+      }
+      // else{
+      //     hamburgerIcon.className = "Menu-items";
+      // }
     }
-    function closeNav() {
-    document.getElementById("mobilemenu").style.width = "0";
-    } 
+    // To close the mobile menu
+    closeBtn.addEventListener('click', function() {
+      hamburgerIcon.style.display = "none"
+      console.log("Hi");
+  });
   </script>
 
   The Bright Future of Web 3.0?
