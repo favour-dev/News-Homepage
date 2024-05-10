@@ -5,22 +5,36 @@
 }
 body {
     background-color: rgb(255, 255, 255);
-    font-size: 15px;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 400 , 700 , 800;
     font-style: normal;
     font-variation-settings:"slnt" 0;
+}
+.container{
+    margin: 0 10px 0 10px;
 }
 /* Mobile Navigation */
 a{
     text-decoration: none;
-    /* padding: 10px; */
+}
+p{
+    font-size: 15px;
+}
+img{
+    width: 100%;
+}
+hr{
+    color:hsl(233, 8%, 79%);
+
+}
+h1{
+   color: hsl(240, 100%, 5%) ; 
 }
 .Navigation-Bar{
     display: flex;
     justify-content: space-between;
-    margin: 10px;
+    padding-top: 10px;
 }
 .Menu-items{
     display: none;
@@ -39,7 +53,7 @@ a{
 }
 .Menu-items a{
     padding: 12px 8px 8px 12px;
-    color: #140606;
+    color: hsl(240, 100%, 5%);
     display: block;
     transition: 0.3s;
 }
@@ -54,13 +68,63 @@ a{
 .Hamburger{
     margin-top: 10px;
 }
-
 /* End of Mobile Navigation Bar */
+.item{
+    display: flex;
+    gap: 1rem;
+    padding: 10px 0 15px 0;
+}
+.desktop{
+    display: none;
+}
+.bright{
+    flex-direction: column;
+}
+.read-more{
+    margin-top: 10px;
+    background-color: hsl(5, 85%, 63%);
+    padding: 10px 25px;
+    border: transparent;
+    color: hsl(36, 100%, 99%);
+}
+.new-container{
+    background-color: hsl(240, 100%, 5%);
+    flex-direction: column;
+    color: hsl(36, 100%, 99%);
+    padding: 30px  15px;
+}
+.new{
+    color: hsl(35, 77%, 62%);
+}
+.new-heading{
+    color: hsl(36, 100%, 99%);
+    padding: 5px 0px;
+}
+.new-paragraph{
+    color:hsl(233, 8%, 79%);
+}
+/* Card section */
+.card-section{
+    margin: 10px 0;
+}
+.card{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.image{
+    width: 120px;
+    height: 150px;
+}
+
+/* Desktop */
 @media screen and (min-width: 1024px) {
     /* Desktop Navigation */
-    #Container{
+    .container{
         margin: auto;
         width: 80%;
+        padding: 0px 0 20px 0;
     }
     .logo{
         padding-top: 15px;
@@ -72,9 +136,7 @@ a{
     }
     .menu{
       display: flex;
-      justify-content:flex-end
-     
-      
+      justify-content:flex-end 
     }
     .Hamburger{
         display: none;
@@ -83,4 +145,39 @@ a{
         display: none;
     }
     /* End of Desktop Navigation Bar */
+    /* Hero Section */
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.5fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        gap: 1rem;
+    }
+    .colorful{
+        grid-column: span 2;
+    }
+    .bright{
+        order: 1;
+        grid-column: span 2;
+        flex-direction: row;
+        /* gap: 3rem; */
+        justify-content:center;
+        padding: 10px;
+    }
+    .new-container{
+        grid-row: span 2;
+    }
+    .new-content{
+        margin: 15px 0;
+    }
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        display: block;
+    }
+    /* Card section */
+    .card-section{
+        display: flex;
+    }
+    
 }
